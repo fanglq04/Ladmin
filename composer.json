@@ -1,5 +1,5 @@
 {
-  "name": "fanglq04/Ladmin",
+  "name": "fanglq04/ladmin",
   "autoload": {
     "psr-4": {
       "WangJF\\Ladmin\\": "src/"
