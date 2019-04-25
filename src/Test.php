@@ -22,4 +22,9 @@ class Test
     {
         echo 'this is test';
     }
+
+    public function detail()
+    {
+        echo 'test tag 0.2';
+    }
 }
