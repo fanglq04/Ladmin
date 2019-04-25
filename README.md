@@ -1,2 +1,1 @@
-# Ladmin
-laravel5+ admin
+# laravel-xadmin
