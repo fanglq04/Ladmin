@@ -17,4 +17,9 @@ class Test
     {
         echo 'my name is wangjifang'.PHP_EOL;
     }
+
+    public function show()
+    {
+        echo 'this is test';
+    }
 }
