@@ -33,15 +33,15 @@
                             <img src="/packages/admin/avatar.png" class="img-circle" alt="User Image">
                             <p>
                                 {{ Auth::guard('admin')->user()->username }}
-                                <small>Member since admin {{ date('Y-m-d') }}</small>
+                                <small>上次登录时间： {{ date('Y-m-d') }}</small>
                             </p>
                         </li>
                         <li class="user-footer">
                             <div class="pull-left">
-                                <a href="" class="btn btn-default btn-flat">setting</a>
+                                <a href="" class="btn btn-default btn-flat">设置</a>
                             </div>
                             <div class="pull-right">
-                                <a href="{{ route('admin.logout') }}" class="btn btn-default btn-flat">logout</a>
+                                <a href="{{ route('admin.logout') }}" class="btn btn-default btn-flat">退出</a>
                             </div>
                         </li>
                     </ul>

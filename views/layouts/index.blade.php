@@ -57,30 +57,41 @@
     <script src="{{ asset ("/packages/admin/AdminLTE/dist/js/app.min.js") }}"></script>
     <script src="{{ asset ("/packages/admin/jquery-pjax/jquery.pjax.js") }}"></script>
     <script src="{{ asset('/packages/admin/nprogress/nprogress.js') }}"></script>
-
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-
-
 </head>
 
 <body class="hold-transition {{config('admin.skin')}} {{join(' ', config('admin.layout'))}}">
 <div class="wrapper">
+    @if(view()->exists('admin.layouts.header'))
+        @include('admin.layouts.header')
+    @else
+        @include('admin::layouts.header')
+    @endif
 
-    @include('admin::layouts.header')
-
-    @include('admin::layouts.sidebar')
+    @if(view()->exists('admin.layouts.sidebar'))
+        @include('admin.layouts.sidebar')
+    @else
+        @include('admin::layouts.sidebar')
+    @endif
 
     <div class="content-wrapper">
         @yield('content')
 
     </div>
+    @if(view()->exists('admin.layouts.validator-error'))
+        @include('admin.layouts.validator-error')
+    @else
+        @include('admin.layouts.validator-error')
+    @endif
 
-
-    @include('admin::layouts.footer')
+    @if(view()->exists('admin.layouts.footer'))
+        @include('admin.layouts.footer')
+    @else
+        @include('admin.layouts.footer')
+    @endif
 
 </div>
 <!-- ./wrapper -->

@@ -16,9 +16,9 @@ use Illuminate\Support\Facades\Cache;
 
 class UninstallCommand extends Command
 {
-    protected $name = 'xadmin:uninstall';
+    protected $name = 'ladmin:uninstall';
 
-    protected $description = 'uninstall xadmin package';
+    protected $description = 'uninstall ladmin package';
 
     public function handle()
     {
@@ -27,7 +27,7 @@ class UninstallCommand extends Command
 
     public function fire()
     {
-        if (!$this->confirm('Are you sure to uninstall xadmin?')) {
+        if (!$this->confirm('Are you sure to uninstall ladmin?')) {
             return;
         }
 

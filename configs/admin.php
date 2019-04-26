@@ -27,8 +27,6 @@ return [
      */
     'title'  => 'LAdmin',
 
-
-
     /*
      * xadmin upload setting.
      */
