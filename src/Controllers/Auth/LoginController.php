@@ -39,7 +39,7 @@ class LoginController extends Controller
      */
     public function showLoginForm()
     {
-        if (view()->exists('admin.index')) {
+        if (view()->exists('admin.auth.login')) {
             $tpl = 'admin.auth.login';
         } else {
             $tpl = 'admin::auth.login';

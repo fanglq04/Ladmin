@@ -84,13 +84,13 @@
     @if(view()->exists('admin.layouts.validator-error'))
         @include('admin.layouts.validator-error')
     @else
-        @include('admin.layouts.validator-error')
+        @include('admin::layouts.validator-error')
     @endif
 
     @if(view()->exists('admin.layouts.footer'))
         @include('admin.layouts.footer')
     @else
-        @include('admin.layouts.footer')
+        @include('admin::layouts.footer')
     @endif
 
 </div>
