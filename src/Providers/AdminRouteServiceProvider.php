@@ -111,8 +111,12 @@ class AdminRouteServiceProvider extends ServiceProvider
             $router->get('logout','LoginController@logout')->name('admin.logout');
 
         });
-
-        Route::get('/admin','Admin\Controllers\IndexController@index')->middleware(['web','admin.menu'])->name('admin');
+        if (config('admin.prefix') == '') {
+            $u = 'admin';
+        } else {
+            $u = config('admin.prefix');
+        }
+        Route::get($u,'Admin\Controllers\IndexController@index')->middleware(['web','admin.menu'])->name('admin');
 
     }
 
