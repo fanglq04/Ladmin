@@ -79,15 +79,15 @@ class AdminServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__.'/../../configs/admin.php'=>config_path('admin.php')
-        ],'yuanchang-admin');
+        ],'fanglq04-admin');
 
         $this->publishes([
-            __DIR__.'/../../assets'=>public_path('packages/admin')
-        ],'yuanchang-admin');
+            __DIR__.'/../../assets'=>public_path('library')
+        ],'fanglq04-admin');
 
         $this->publishes([
             __DIR__.'/../../migrations/'=>base_path('database/migrations')
-        ],'yuanchang-admin');
+        ],'fanglq04-admin');
     }
 
 }
