@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="{{ asset("/library/nestable/nestable.css") }}">
     <link rel="stylesheet" href="{{ asset('/library/toastr/toastr.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/library/nprogress/nprogress.css') }}">
+    <link rel="stylesheet" href="{{ asset('/library/bootstrap-datepicker/bootstrap-datepicker3.min.css') }}">
     <link rel="stylesheet" href="{{ asset("/library/AdminLTE/css/AdminLTE.min.css") }}">
     @stack('css')
     <script src="{{ asset ("/library/jQuery/jQuery-2.1.4.min.js") }}"></script>
@@ -74,6 +75,8 @@
 <script src="{{ asset('/library/select2/js/i18n/zh-CN.js') }}"></script>
 <script src="{{ asset('/library/layer/layer.js') }}"></script>
 <script src="{{ asset('/library/toastr/toastr.min.js') }}"></script>
+<script src="{{ asset('/library/bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}"></script>
+<script src="{{ asset('/library/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js') }}"></script>
 <script>
     $(document).ready(function(){
         $('.icheck').iCheck({
