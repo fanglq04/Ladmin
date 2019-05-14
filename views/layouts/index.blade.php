@@ -8,16 +8,16 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link rel="stylesheet" href="{{ asset("/library/bootstrap/css/bootstrap.min.css") }}">
     <link rel="stylesheet" href="{{ asset('/library/ionicons/2.0.1/css/ionicons.min.css') }}">
-    <link rel="stylesheet" href="{{ asset("/library/font-awesome/css/font-awesome.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("/library/font-awesome/4.6.1/css/font-awesome.min.css") }}">
     <link rel="stylesheet" href="{{ asset("/library/AdminLTE/css/skins/" . config('admin.skin') .".min.css") }}">
     <link rel="stylesheet" href="{{ asset("/library/datatables/jquery.dataTables.min.css") }}">
     <link rel="stylesheet" href="{{ asset('/library/datatables/dataTables.bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('/library/iCheck/square/red.css') }}">
-    <link rel="stylesheet" href="{{ asset('/library/select2/select2.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/library/select2/css/select2.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/library/bootstrap-fileinput/css/fileinput.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/library/load/load.css') }}">
     <link rel="stylesheet" href="{{ asset("/library/nestable/nestable.css") }}">
-    <link rel="stylesheet" href="{{ asset('/library/toastr/build/toastr.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/library/toastr/toastr.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/library/nprogress/nprogress.css') }}">
     <link rel="stylesheet" href="{{ asset("/library/AdminLTE/css/AdminLTE.min.css") }}">
     @stack('css')
@@ -68,10 +68,10 @@
 
 <!-- REQUIRED JS SCRIPTS -->
 <script src="{{ asset ("/library/chartjs/Chart.min.js") }}"></script>
-<script src="{{ asset ("/library/estable/jquery.nestable.js") }}"></script>
+<script src="{{ asset ("/library/nestable/jquery.nestable.js") }}"></script>
 <script src="{{ asset('/library/iCheck/icheck.min.js') }}"></script>
-<script src="{{ asset('/library/select2/select2.full.min.js') }}"></script>
-<script src="{{ asset('/library/select2/i18n/zh-CN.js') }}"></script>
+<script src="{{ asset('/library/select2/js/select2.full.min.js') }}"></script>
+<script src="{{ asset('/library/select2/js/i18n/zh-CN.js') }}"></script>
 <script src="{{ asset('/library/layer/layer.js') }}"></script>
 <script src="{{ asset('/library/toastr/toastr.min.js') }}"></script>
 <script>
@@ -86,6 +86,28 @@
             $('.deleteForm').attr('action',$(this).attr('data-href'));
             $('#modal-delete').modal();
         });
+        $(".datepicker").datepicker({
+            language: "zh-CN",
+            autoclose: true,
+            clearBtn: false,
+            todayBtn: false,
+            format: "yyyy-mm-dd"
+        });
+        toastr.options = {
+            closeButton: false,
+            debug: false,
+            progressBar: true,
+            positionClass: "toast-top-center",
+            onclick: null,
+            showDuration: "300",
+            hideDuration: "1000",
+            timeOut: "2000",
+            extendedTimeOut: "1000",
+            showEasing: "swing",
+            hideEasing: "linear",
+            showMethod: "fadeIn",
+            hideMethod: "fadeOut"
+        };
     });
 </script>
 @stack('js')
