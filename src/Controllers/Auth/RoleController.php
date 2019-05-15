@@ -39,8 +39,12 @@ class RoleController extends BaseController
     {
         // get permission information
         $permissions = $this->createPermissionTreeCache();
-
-        return view('admin::auth.role.create', ['permissions' => $permissions]);
+        if (view()->exists('admin.auth.role.index')) {
+            $tpl = 'admin.auth.role.create';
+        } else {
+            $tpl = 'admin::auth.role.create';
+        }
+        return view($tpl, ['permissions' => $permissions]);
     }
 
     public function store(Request $request)
