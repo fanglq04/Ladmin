@@ -19,7 +19,6 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
 </head>
 <body class="hold-transition login-page" style="background-image: url({{asset('images/login-bg.jpg')}})">
 <div class="login-box">
@@ -27,7 +26,6 @@
         <a>后台管理系统</a>
     </div>
     @include('admin::layouts.validator-error')
-<!-- /.login-logo -->
     <div class="login-box-body">
         <p class="login-box-msg">欢迎使用</p>
         <form action="{{ route('admin.login') }}" method="post">
@@ -55,11 +53,8 @@
                 <!-- /.col -->
             </div>
         </form>
-
     </div>
-    <!-- /.login-box-body -->
 </div>
-
 
 <script src="{{ asset('/library/iCheck/icheck.min.js') }}"></script>
 <script src="{{ asset('/library/toastr/toastr.min.js') }}"></script>
