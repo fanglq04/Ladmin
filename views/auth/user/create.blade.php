@@ -22,7 +22,7 @@
                                 <a class="btn btn-sm btn-default form-history-back"><i class="fa fa-arrow-left"></i>&nbsp;返回</a>
                             </div>
                         </div>
-                        <form action="{{ route('users.store') }}" class="form-horizontal" method="post">
+                        <form action="{{ route('users.store') }}" class="form-horizontal" method="post" enctype="multipart/form-data">
                             {{csrf_field()}}
                             <div class="box-body">
                                     @include('admin::auth.user.create_form')

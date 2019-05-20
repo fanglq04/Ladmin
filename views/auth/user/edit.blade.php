@@ -22,7 +22,7 @@
                                 <a class="btn btn-sm btn-default form-history-back"><i class="fa fa-arrow-left"></i>&nbsp;返回</a>
                             </div>
                         </div>
-                        <form action="{{ route('users.update',$user->id) }}" class="form-horizontal" method="post">
+                        <form action="{{ route('users.update',$user->id) }}" class="form-horizontal" method="post" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             {{ method_field('put') }}
                             <div class="box-body">
